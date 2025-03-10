@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0e0c0cf8;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    transition: .2s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 20px;
+    transition: .2s;
+}
+
+nav ul li a:hover {
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.button-search {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #640005;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.button-search:hover {
+    background-color: #380204;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.movie-card {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+p {
+    font-size: 12px;
+    color: #bbb;
+}
+
+p.nfe {
+    color: #640005;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .movies-grid, .carousel-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
